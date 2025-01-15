@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="hello.springtx.order.OrderServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-15T00:53:30" hostname="dep-MacBook-Pro.local" time="0.331">
+  <properties/>
+  <testcase name="bizException()" classname="hello.springtx.order.OrderServiceTest" time="0.331"/>
+  <system-out><![CDATA[09:53:29.618 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hello.springtx.order.OrderServiceTest]: OrderServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:53:29.658 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hello.springtx.SpringtxApplication for test class hello.springtx.order.OrderServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-15T09:53:29.809+09:00  INFO 10910 --- [springtx] [    Test worker] hello.springtx.order.OrderServiceTest    : Starting OrderServiceTest using Java 17.0.12 with PID 10910 (started by dp in /Users/dp/Desktop/study/sprint-transaction)
+2025-01-15T09:53:29.810+09:00  INFO 10910 --- [springtx] [    Test worker] hello.springtx.order.OrderServiceTest    : No active profile set, falling back to 1 default profile: "default"
+2025-01-15T09:53:29.948+09:00  INFO 10910 --- [springtx] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-15T09:53:29.970+09:00  INFO 10910 --- [springtx] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2025-01-15T09:53:30.094+09:00  INFO 10910 --- [springtx] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-15T09:53:30.163+09:00  INFO 10910 --- [springtx] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:723f6469-7e0c-4177-a3b5-a85da1bcf2f4 user=SA
+2025-01-15T09:53:30.163+09:00  INFO 10910 --- [springtx] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-15T09:53:30.197+09:00  INFO 10910 --- [springtx] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-15T09:53:30.220+09:00  INFO 10910 --- [springtx] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-15T09:53:30.232+09:00  INFO 10910 --- [springtx] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-15T09:53:30.324+09:00  INFO 10910 --- [springtx] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-15T09:53:30.351+09:00  INFO 10910 --- [springtx] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-15T09:53:30.601+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : create global temporary table HTE_orders(rn_ integer not null, id bigint, pay_status varchar(255), username varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-15T09:53:30.640+09:00  INFO 10910 --- [springtx] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-15T09:53:30.645+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : drop table if exists orders cascade 
+2025-01-15T09:53:30.645+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : drop sequence if exists orders_seq
+2025-01-15T09:53:30.647+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : create sequence orders_seq start with 1 increment by 50
+2025-01-15T09:53:30.648+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : create table orders (id bigint not null, pay_status varchar(255), username varchar(255), primary key (id))
+2025-01-15T09:53:30.650+09:00  INFO 10910 --- [springtx] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-15T09:53:30.788+09:00  INFO 10910 --- [springtx] [    Test worker] hello.springtx.order.OrderServiceTest    : Started OrderServiceTest in 1.078 seconds (process running for 1.484)
+2025-01-15T09:53:31.038+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [hello.springtx.order.OrderService.order]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-01-15T09:53:31.039+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(1101252341<open>)] for JPA transaction
+2025-01-15T09:53:31.040+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@8f8717b]
+2025-01-15T09:53:31.040+09:00 TRACE 10910 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [hello.springtx.order.OrderService.order]
+2025-01-15T09:53:31.040+09:00  INFO 10910 --- [springtx] [    Test worker] hello.springtx.order.OrderService        : order 호출
+2025-01-15T09:53:31.042+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(1101252341<open>)] for JPA transaction
+2025-01-15T09:53:31.042+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2025-01-15T09:53:31.042+09:00 TRACE 10910 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-01-15T09:53:31.045+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : select next value for orders_seq
+2025-01-15T09:53:31.064+09:00 TRACE 10910 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2025-01-15T09:53:31.064+09:00  INFO 10910 --- [springtx] [    Test worker] hello.springtx.order.OrderService        : 결제 프로세스 진입
+2025-01-15T09:53:31.064+09:00  INFO 10910 --- [springtx] [    Test worker] hello.springtx.order.OrderService        : 잔고 부족 비즈니스 예외 발생
+2025-01-15T09:53:31.065+09:00 TRACE 10910 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [hello.springtx.order.OrderService.order] after exception: hello.springtx.order.NotEnoughMoneyException: 잔고가 부족합니다.
+2025-01-15T09:53:31.065+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2025-01-15T09:53:31.065+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(1101252341<open>)]
+2025-01-15T09:53:31.070+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : insert into orders (pay_status,username,id) values (?,?,?)
+2025-01-15T09:53:31.073+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : update orders set pay_status=?,username=? where id=?
+2025-01-15T09:53:31.075+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(1101252341<open>)] after transaction
+2025-01-15T09:53:31.075+09:00  INFO 10910 --- [springtx] [    Test worker] hello.springtx.order.OrderServiceTest    : 고객에겍 잔고 부족을 알리고 별도의 계좌로 입금하도록 안내
+2025-01-15T09:53:31.076+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly
+2025-01-15T09:53:31.076+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(676470485<open>)] for JPA transaction
+2025-01-15T09:53:31.076+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2b06c388]
+2025-01-15T09:53:31.077+09:00 TRACE 10910 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-01-15T09:53:31.085+09:00 DEBUG 10910 --- [springtx] [    Test worker] org.hibernate.SQL                        : select o1_0.id,o1_0.pay_status,o1_0.username from orders o1_0 where o1_0.id=?
+2025-01-15T09:53:31.093+09:00 TRACE 10910 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
+2025-01-15T09:53:31.093+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2025-01-15T09:53:31.094+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(676470485<open>)]
+2025-01-15T09:53:31.094+09:00 DEBUG 10910 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(676470485<open>)] after transaction
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
