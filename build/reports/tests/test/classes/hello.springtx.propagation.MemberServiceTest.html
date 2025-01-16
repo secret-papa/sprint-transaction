@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - MemberServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>MemberServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/hello.springtx.propagation.html">hello.springtx.propagation</a> &gt; MemberServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.447s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">recoverException_success()</td>
+<td class="success">1.447s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>20:45:02.135 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [hello.springtx.propagation.MemberServiceTest]: MemberServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:45:02.321 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration hello.springtx.SpringtxApplication for test class hello.springtx.propagation.MemberServiceTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2025-01-16T20:45:03.044+09:00  INFO 52260 --- [springtx] [    Test worker] h.s.propagation.MemberServiceTest        : Starting MemberServiceTest using Java 17.0.3 with PID 52260 (started by seungha in /Users/seungha/Desktop/my/sprint-transaction)
+2025-01-16T20:45:03.047+09:00  INFO 52260 --- [springtx] [    Test worker] h.s.propagation.MemberServiceTest        : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2025-01-16T20:45:03.738+09:00  INFO 52260 --- [springtx] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-16T20:45:03.831+09:00  INFO 52260 --- [springtx] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2025-01-16T20:45:04.678+09:00  INFO 52260 --- [springtx] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-16T20:45:04.870+09:00  INFO 52260 --- [springtx] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:98c52fa0-afb3-411b-8a64-edee4cc47aa4 user=SA
+2025-01-16T20:45:04.873+09:00  INFO 52260 --- [springtx] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-16T20:45:05.015+09:00  INFO 52260 --- [springtx] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-16T20:45:05.070+09:00  INFO 52260 --- [springtx] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-16T20:45:05.131+09:00  INFO 52260 --- [springtx] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-16T20:45:05.476+09:00  INFO 52260 --- [springtx] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-16T20:45:05.631+09:00  INFO 52260 --- [springtx] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-16T20:45:06.509+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create global temporary table HTE_orders(rn_ integer not null, id bigint, pay_status varchar(255), username varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-16T20:45:06.517+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create global temporary table HTE_log(rn_ integer not null, id bigint, message varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-16T20:45:06.518+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create global temporary table HTE_member(rn_ integer not null, id bigint, username varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-16T20:45:06.648+09:00  INFO 52260 --- [springtx] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-16T20:45:06.664+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : drop table if exists log cascade 
+2025-01-16T20:45:06.665+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : drop table if exists member cascade 
+2025-01-16T20:45:06.666+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : drop table if exists orders cascade 
+2025-01-16T20:45:06.666+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : drop sequence if exists log_seq
+2025-01-16T20:45:06.666+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : drop sequence if exists member_seq
+2025-01-16T20:45:06.668+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : drop sequence if exists orders_seq
+2025-01-16T20:45:06.679+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create sequence log_seq start with 1 increment by 50
+2025-01-16T20:45:06.681+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create sequence member_seq start with 1 increment by 50
+2025-01-16T20:45:06.682+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create sequence orders_seq start with 1 increment by 50
+2025-01-16T20:45:06.685+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create table log (id bigint not null, message varchar(255), primary key (id))
+2025-01-16T20:45:06.686+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create table member (id bigint not null, username varchar(255), primary key (id))
+2025-01-16T20:45:06.688+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : create table orders (id bigint not null, pay_status varchar(255), username varchar(255), primary key (id))
+2025-01-16T20:45:06.694+09:00  INFO 52260 --- [springtx] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-16T20:45:07.394+09:00  INFO 52260 --- [springtx] [    Test worker] h.s.propagation.MemberServiceTest        : Started MemberServiceTest in 4.879 seconds (process running for 6.602)
+2025-01-16T20:45:08.098+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [hello.springtx.propagation.MemberService.joinV2]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-01-16T20:45:08.099+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(362023079&lt;open&gt;)] for JPA transaction
+2025-01-16T20:45:08.102+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4a1c14a6]
+2025-01-16T20:45:08.103+09:00 TRACE 52260 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [hello.springtx.propagation.MemberService.joinV2]
+2025-01-16T20:45:08.104+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.MemberService     : == memberRepository 호출 시작 ==
+2025-01-16T20:45:08.106+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(362023079&lt;open&gt;)] for JPA transaction
+2025-01-16T20:45:08.109+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Participating in existing transaction
+2025-01-16T20:45:08.111+09:00 TRACE 52260 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [hello.springtx.propagation.MemberRepository.save]
+2025-01-16T20:45:08.112+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.MemberRepository  : member 저장
+2025-01-16T20:45:08.119+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : select next value for member_seq
+2025-01-16T20:45:08.170+09:00 TRACE 52260 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [hello.springtx.propagation.MemberRepository.save]
+2025-01-16T20:45:08.170+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.MemberService     : == memberRepository 호출 종료 ==
+2025-01-16T20:45:08.171+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.MemberService     : == logRepository 호출 시작 ==
+2025-01-16T20:45:08.172+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Found thread-bound EntityManager [SessionImpl(362023079&lt;open&gt;)] for JPA transaction
+2025-01-16T20:45:08.173+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Suspending current transaction, creating new transaction with name [hello.springtx.propagation.LogRepository.save]
+2025-01-16T20:45:08.174+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(57525945&lt;open&gt;)] for JPA transaction
+2025-01-16T20:45:08.174+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@5cff6d1d]
+2025-01-16T20:45:08.174+09:00 TRACE 52260 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [hello.springtx.propagation.LogRepository.save]
+2025-01-16T20:45:08.174+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.LogRepository     : log 저장
+2025-01-16T20:45:08.175+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : select next value for log_seq
+2025-01-16T20:45:08.180+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.LogRepository     : log 저장 시 예외 발생
+2025-01-16T20:45:08.184+09:00 TRACE 52260 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [hello.springtx.propagation.LogRepository.save] after exception: java.lang.RuntimeException: 예외 발생
+2025-01-16T20:45:08.185+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction rollback
+2025-01-16T20:45:08.185+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Rolling back JPA transaction on EntityManager [SessionImpl(57525945&lt;open&gt;)]
+2025-01-16T20:45:08.187+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(57525945&lt;open&gt;)] after transaction
+2025-01-16T20:45:08.188+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Resuming suspended transaction after completion of inner transaction
+2025-01-16T20:45:08.188+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.MemberService     : log 저장에 실패했습니다. logMessage=로그예외_recoverException_success
+2025-01-16T20:45:08.189+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.MemberService     : 정상 흐름 반환
+2025-01-16T20:45:08.189+09:00  INFO 52260 --- [springtx] [    Test worker] h.springtx.propagation.MemberService     : == logRepository 호출 종료 ==
+2025-01-16T20:45:08.189+09:00 TRACE 52260 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [hello.springtx.propagation.MemberService.joinV2]
+2025-01-16T20:45:08.190+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2025-01-16T20:45:08.191+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(362023079&lt;open&gt;)]
+2025-01-16T20:45:08.202+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : insert into member (username,id) values (?,?)
+2025-01-16T20:45:08.208+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(362023079&lt;open&gt;)] after transaction
+2025-01-16T20:45:08.209+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Creating new transaction with name [hello.springtx.propagation.MemberRepository.find]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2025-01-16T20:45:08.210+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Opened new EntityManager [SessionImpl(702392974&lt;open&gt;)] for JPA transaction
+2025-01-16T20:45:08.212+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@4c678a1f]
+2025-01-16T20:45:08.213+09:00 TRACE 52260 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Getting transaction for [hello.springtx.propagation.MemberRepository.find]
+2025-01-16T20:45:08.750+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : select m1_0.id,m1_0.username from member m1_0 where m1_0.username=?
+2025-01-16T20:45:08.777+09:00 TRACE 52260 --- [springtx] [    Test worker] o.s.t.i.TransactionInterceptor           : Completing transaction for [hello.springtx.propagation.MemberRepository.find]
+2025-01-16T20:45:08.778+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Initiating transaction commit
+2025-01-16T20:45:08.778+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Committing JPA transaction on EntityManager [SessionImpl(702392974&lt;open&gt;)]
+2025-01-16T20:45:08.780+09:00 DEBUG 52260 --- [springtx] [    Test worker] o.s.orm.jpa.JpaTransactionManager        : Closing JPA EntityManager [SessionImpl(702392974&lt;open&gt;)] after transaction
+2025-01-16T20:45:08.827+09:00 DEBUG 52260 --- [springtx] [    Test worker] org.hibernate.SQL                        : select l1_0.id,l1_0.message from log l1_0 where l1_0.message=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.5</a> at 2025. 1. 16. 오후 8:45:08</p>
+</div>
+</div>
+</body>
+</html>
